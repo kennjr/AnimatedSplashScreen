@@ -9,9 +9,12 @@ import androidx.navigation.compose.rememberNavController
 fun Navigation(){
     val navController = rememberNavController()
 
-    NavHost(navController = navController, startDestination = "splash_frag", builder = {
-        composable("", content = {
-
+    NavHost(navController = navController, startDestination = Destinations.SPLASH_FRAGMENT.destination, builder = {
+        composable(Destinations.SPLASH_FRAGMENT.destination, content = {
+            SplashFragment(navController = navController)
+        })
+        composable(Destinations.HOME_FRAGMENT.destination, content = {
+            HomeFragment(navController = navController)
         })
     })
 }
