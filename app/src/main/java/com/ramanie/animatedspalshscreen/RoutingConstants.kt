@@ -5,3 +5,8 @@ enum class Routes(val route: String){
     HOME_FRAG_TO_SPLASH_SCREEN("home_to_splash"),
 
 }
+
+enum class Destinations(val destination: String){
+    HOME_FRAGMENT("home_fragment"),
+    SPLASH_FRAGMENT("splash_fragment")
+}
